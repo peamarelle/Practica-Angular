@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';//con Input puedo pasarle una entrada a mi componente
 
 @Component({
   selector: 'app-user',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  flag = true;
+  @Input() nameUser;
 
   constructor() { }
 

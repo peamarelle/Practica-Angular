@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'myfirstapp';
+  users = ['Joe', 'Kurt', 'Dee Dee', 'Dave', 'Marky'];
+
+  addUser(newUser) {
+    this.users.push(newUser.value);
+    return false;
+  }
+
+  deleteUser(user) {
+    let index = this.users.indexOf(user);
+    if(index!==-1){
+      this.users.splice(index, 1);
+    }
+  }
 }
