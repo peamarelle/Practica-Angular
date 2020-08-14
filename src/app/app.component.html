@@ -1,11 +1,9 @@
-<form (submit)="addUser(newUser)">
-  <input type="text" #newUser>
-  <button>Send User</button>
-</form>
 <ul>
-  <li *ngFor ="let user of users">
-    {{ user }} <button (click)="deleteUser(user)">delete me!</button>
-  </li>
+    <li>
+        <a routerLink='/'>Home</a>
+    </li>
+    <li>
+        <a routerLink='/about'>About</a>
+    </li>
 </ul>
-
-
+<router-outlet></router-outlet>
