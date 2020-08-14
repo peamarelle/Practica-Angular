@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../Post';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-about',
@@ -8,11 +9,11 @@ import { Post } from '../Post';
 })
 export class AboutComponent implements OnInit {
 
-  posts: Pos[];
+  posts: Post[];
 
   constructor(private dataService: DataService) {
     this.dataService.getData().subscribe(data => {
-      this.posts = [];
+      this.posts = data;
     })
    }
 
